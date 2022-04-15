@@ -1,0 +1,43 @@
+.userAvatar {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.userAvatar__image {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.userAvatar__dropdown {
+  text-align: center;
+  position: absolute;
+  top: 48px;
+  right: 0px;
+  background: rgb(19, 19, 19);
+  border: 1px solid rgba(151, 151, 151, 0.34);
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 50%) 0px 0px 18px 0px;
+  padding: 10px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  width: 100px;
+  opacity: 0;
+  cursor: default;
+}
+
+.userAvatar:hover > .userAvatar__dropdown {
+  transition-duration: 0.5s;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.userAvatar__dropdown:hover,
+.userAvatar__dropdown:active {
+  background-color: rgb(60, 57, 57);
+}
