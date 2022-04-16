@@ -11,22 +11,31 @@ const LoginButton = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
+    // To check if the user is already logged in
     onAuthStateChanged(auth, async (user) => {
       if (user) {
+        // if user found
+        // set the user credentials automatically into redux
+        // then navigate to the home page
         dispatch(setUser(user))
         navigate("/home", { replace: true })
       } else {
+        // if user not found
+        // navigate to the Login page(the starting page)
         navigate("/", { replace: true })
       }
     })
   }, [navigate, dispatch])
 
-  const handleAuth = () => {
+  const handleAuth = async () => {
+    // Sign In using firebase auth
     signInWithPopup(auth, provider)
       .then((result) => {
+        // set user credentials in redux to use it somewhere else
         dispatch(setUser(result.user))
       })
       .catch((error) => {
+        // if catching error (alert the user)
         alert(error.message)
       })
   }

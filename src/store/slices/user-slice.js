@@ -1,11 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+// initialState all empty because the initial State of the Auth in this app is not Login
 const initialState = {
   name: "",
   email: "",
   photo: "",
 }
 
+// userSlice to manage signIn and signOut
+// setUserLoginDetails set the user credentials
+// setSignOutState empty the user
 const userSlice = createSlice({
   name: "user",
   initialState,

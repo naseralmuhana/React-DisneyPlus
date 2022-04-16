@@ -8,6 +8,8 @@ import movieIcon from "../../../../assets/images/movie-icon.svg"
 import seriesIcon from "../../../../assets/images/series-icon.svg"
 import NavbarItem from "./NavbarItem"
 
+// Navigate List Icons with its label and path
+
 const navbarListIcons = [
   { label: "Home", icon: homeIcon, path: "/home" },
   { label: "Search", icon: searchIcon, path: "/search" },
@@ -18,6 +20,7 @@ const navbarListIcons = [
 ]
 
 const Navbar = () => {
+  // map navbarListIcons and send the info to the NavbarItem
   const navbarListItem = (
     <ul className={classes.nav__list}>
       {navbarListIcons.map((item) => (

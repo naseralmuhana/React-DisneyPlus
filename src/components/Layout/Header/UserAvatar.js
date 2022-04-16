@@ -1,36 +1,30 @@
 import { signOut } from "firebase/auth"
 import React from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { auth } from "../../../firebase"
-import {
-  selectedUserName,
-  selectedUserPhoto,
-  setSignOutState,
-} from "../../../store/slices/user-slice"
+import { setSignOutState } from "../../../store/slices/user-slice"
 import classes from "./UserAvatar.module.css"
 
-const UserAvatar = () => {
-  const userPhoto = useSelector(selectedUserPhoto)
-  const username = useSelector(selectedUserName)
+const UserAvatar = ({ name, photo }) => {
   const dispatch = useDispatch()
 
   const handleAuth = () => {
+    // sign out handler
+    // using signOut firebase built-in method
     signOut(auth)
       .then(() => {
+        // dispatch setSignOutState action from user slice actions
         dispatch(setSignOutState())
       })
       .catch((error) => {
+        // if catching error (alert the user)
         alert(error.message)
       })
   }
 
   return (
     <div className={classes.userAvatar}>
-      <img
-        className={classes.userAvatar__image}
-        src={userPhoto}
-        alt={username}
-      />
+      <img className={classes.userAvatar__image} src={photo} alt={name} />
       <div className={classes.userAvatar__dropdown}>
         <span onClick={handleAuth}>Sign out</span>
       </div>

@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap");
 
-@font-face {
+/* @font-face {
   font-family: "Avenir-Roman";
   src: url("./assets/fonts/Avenir-Roman.woff") format("woff");
   font-weight: 400;
@@ -11,7 +11,7 @@
   src: url("./assets/fonts/Avenir-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -22,7 +22,8 @@ html {
 }
 
 body {
-  font-family: "Avenir-Roman", sans-serif;
+  /* font-family: "Avenir-Roman", sans-serif; */
+  font-family: "Nunito", sans-serif;
   background-color: #040714;
   margin: 0;
   padding: 0;
