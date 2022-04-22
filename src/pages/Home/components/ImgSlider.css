@@ -1,0 +1,38 @@
+.slider {
+  margin-top: 20px;
+}
+
+.slider > button {
+  opacity: 0;
+  height: 100%;
+  width: 5vw;
+  z-index: 1;
+  transition: opacity 0.2s ease 0s;
+}
+
+.slider > button:hover,
+.slider > button:active {
+  opacity: 1;
+}
+
+.slider ul li button::before {
+  font-size: 10px;
+  color: #969eab;
+}
+
+.slider ul li.slick-active button::before {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.slider .slick-list {
+  overflow: initial;
+}
+
+.slider .slick-prev {
+  left: -75px;
+}
+
+.slider .slick-next {
+  right: -75px;
+}

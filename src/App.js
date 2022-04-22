@@ -1,19 +1,18 @@
-import React from "react"
-import { Route, Routes } from "react-router-dom"
-import { Header, Home, Landing } from "./containers"
+import { Routes, Route } from "react-router-dom"
+import Layout from "./components/Layout/Layout"
+import Home from "./pages/Home/Home"
+import Login from "./pages/Login/Login"
+import Search from "./pages/Search/Search"
 
 const App = () => {
-  console.log("APP")
   return (
-    <>
-      <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="home" element={<Home />} />
-        </Routes>
-      </main>
-    </>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/search" element={<Search />} />
+      </Routes>
+    </Layout>
   )
 }
 
