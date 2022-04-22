@@ -1,0 +1,29 @@
+.button {
+  display: block;
+  cursor: pointer;
+  font: inherit;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #f9f9f9;
+  padding: 9px 18px;
+  border: 1px solid #f9f9f9;
+  border-radius: 4px;
+  letter-spacing: 1.8px;
+  line-height: 1.6;
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.button:hover,
+.button:active {
+  background-color: #f9f9f9;
+  color: #090b13;
+}
+
+@media (max-width: 320px) {
+  .button {
+    letter-spacing: 1.6px;
+    line-height: 1.45;
+    font-size: 15px;
+    padding: 7px 16px;
+  }
+}

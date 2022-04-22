@@ -14,7 +14,7 @@
 
 .logo {
   display: inline-block;
-  margin-top: 4px;
+  /* margin-top: 4px; */
   width: 80px;
   max-height: 100%;
 }
@@ -22,4 +22,15 @@
 .logo__img {
   display: block;
   width: 100%;
+}
+
+@media (max-width: 650px) {
+  .header {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 320px) {
+  .header {
+    padding: 0 22px;
+  }
 }
