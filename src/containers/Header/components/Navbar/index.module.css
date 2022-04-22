@@ -8,8 +8,11 @@
   display: flex;
 }
 
-
 @media only screen and (max-width: 800px) {
+  .nav {
+    margin-right: 0;
+    margin-left: auto;
+  }
   .nav__list {
     position: fixed;
     inset: 0 0 0 75%;
@@ -30,9 +33,10 @@
   /* Hamburger Menu  */
   .menu__btn {
     display: block;
-    position: absolute;
+    position: relative;
+    /* position: absolute;
     top: 15px;
-    right: 36px;
+    right: 36px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,14 +85,14 @@
   }
 }
 
-@media only screen and (max-width: 650px){
-  .nav__list{
+@media only screen and (max-width: 650px) {
+  .nav__list {
     inset: 0 0 0 55%;
   }
 }
 
-@media only screen and (max-width: 360px){
-  .nav__list{
+@media only screen and (max-width: 360px) {
+  .nav__list {
     inset: 0 0 0 37%;
   }
 }
