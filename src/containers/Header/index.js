@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { headerLogo } from "../../assets/images"
 import Button from "../../components/UI/Button"
 import { useAuth } from "../../store/auth-context"
@@ -7,24 +7,23 @@ import Navbar from "./components/Navbar"
 import styles from "./index.module.css"
 
 const Header = () => {
+  console.log("Header")
   const { currentUser, logout, login } = useAuth()
+  const navigate = useNavigate()
 
   const LoginHandler = async () => {
     try {
-      const result = await login()
-      console.log("result", result)
+      await login()
+      navigate("home", { replace: true })
     } catch (error) {
-      console.log(error.message)
+      alert(error)
     }
   }
   const LogoutHandler = async () => {
-    try {
-      const result = await logout()
-      console.log("result", result)
-    } catch (error) {
-      console.log(error.message)
-    }
+    await logout()
+    navigate("/", { replace: true })
   }
+
   return (
     <header className={styles.header}>
       <Link className={styles.logo} to="/">

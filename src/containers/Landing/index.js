@@ -4,6 +4,7 @@ import Image from "./components/Image"
 import styles from "./index.module.css"
 
 const Landing = () => {
+  console.log("Landing")
   return (
     <section className={styles.landing}>
       <div className={styles.background} />
