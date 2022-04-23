@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./index.module.css"
+import styles from "./Image.module.css"
 
 const Image = ({ src }) => {
   return <img className={styles.logo} src={src} alt={src} />

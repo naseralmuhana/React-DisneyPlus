@@ -1,29 +1,13 @@
 import React from "react"
+import Slider from "./components/Slider"
 import styles from "./index.module.css"
 
 const Home = () => {
   console.log("HOME")
   return (
-    <>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-      <div>Home</div>
-    </>
+    <main className={styles.home}>
+      <Slider />
+    </main>
   )
 }
 

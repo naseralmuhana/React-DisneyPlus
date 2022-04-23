@@ -1,12 +1,13 @@
 import React from "react"
 import { ctaLogoOne, ctaLogoTwo } from "../../assets/images"
 import Image from "./components/Image"
+
 import styles from "./index.module.css"
 
 const Landing = () => {
   console.log("LANDING")
   return (
-    <section className={styles.landing}>
+    <main className={styles.landing}>
       <div className={styles.background} />
       <div className={styles.content}>
         <div className={styles.content__body}>
@@ -22,7 +23,7 @@ const Landing = () => {
           <Image src={ctaLogoTwo} />
         </div>
       </div>
-    </section>
+    </main>
   )
 }
 

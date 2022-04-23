@@ -13,15 +13,13 @@ const App = () => {
   return (
     <>
       <Header />
-      <main>
-        <Routes>
-          {!isLoggedIn && <Route path="/" element={<Landing />} />}
-          <Route element={<ProtectedRoutes />}>
-            <Route path="home" element={<Home />} />
-          </Route>
-          <Route path="*" element={<Navigate to={"home"} />} />
-        </Routes>
-      </main>
+      <Routes>
+        {!isLoggedIn && <Route path="/" element={<Landing />} />}
+        <Route element={<ProtectedRoutes />}>
+          <Route path="home" element={<Home />} />
+        </Route>
+        <Route path="*" element={<Navigate to={"home"} />} />
+      </Routes>
     </>
   )
 }
