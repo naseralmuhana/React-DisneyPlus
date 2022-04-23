@@ -11,11 +11,13 @@ const AuthContext = React.createContext({
 })
 
 export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null)
+  const [currentUser, setCurrentUser] = useState({})
   const [isLoggedIn, setIsLoggedIn] = useLocalStorage("isLoggedIn", false)
 
   // Login
-  const login = async () => await signInWithPopup(auth, provider)
+  const login = async () => {
+    await signInWithPopup(auth, provider)
+  }
 
   // Logout
   const logout = async () => await signOut(auth)

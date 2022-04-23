@@ -1,5 +1,4 @@
 import { Navigate, Outlet } from "react-router-dom"
-import { Landing } from "../containers"
 import { useAuth } from "../store/AuthContext"
 
 const ProtectedRoutes = () => {

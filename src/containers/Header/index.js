@@ -4,12 +4,12 @@ import { headerLogo } from "../../assets/images"
 import Button from "../../components/UI/Button"
 import { useAuth } from "../../store/AuthContext"
 import Navbar from "./components/Navbar"
+import UserAvatar from "./components/Navbar/UserAvatar"
 import styles from "./index.module.css"
 
 const Header = () => {
-  const { login, logout, isLoggedIn } = useAuth()
+  const { login, isLoggedIn, currentUser } = useAuth()
   const LoginHandler = () => login()
-  const LogoutHandler = () => logout()
 
   return (
     <header className={styles.header}>
@@ -18,7 +18,14 @@ const Header = () => {
       </Link>
       {isLoggedIn && <Navbar />}
       {!isLoggedIn && <Button onClick={LoginHandler}>Login</Button>}
-      {isLoggedIn && <Button onClick={LogoutHandler}>Logout</Button>}
+
+      {isLoggedIn && (
+        <UserAvatar
+          photo={currentUser.photoURL}
+          name={currentUser.displayName}
+          className={styles.inactive}
+        />
+      )}
     </header>
   )
 }

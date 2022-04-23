@@ -1,7 +1,7 @@
 import React from "react"
 import { Navigate, Route, Routes } from "react-router-dom"
 import ProtectedRoutes from "./components/ProtectedRoutes"
-import { Header, Home, Landing, Search } from "./containers"
+import { Header, Home, Landing } from "./containers"
 import { useAuth } from "./store/AuthContext"
 
 // const Header = React.lazy(() => import("./containers/Header"))

@@ -1,0 +1,49 @@
+.avatar {
+  position: relative;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.dropdown {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 48px;
+  width: 100px;
+  white-space: nowrap;
+  text-align: center;
+  background-color: rgb(19, 19, 19);
+  border: 1px solid rgba(151, 151, 151, 0.34);
+  box-shadow: rgb(0 0 0 / 50%) 0px 0px 18px 0px;
+  border-radius: 4px;
+  padding: 10px;
+  letter-spacing: 2px;
+  font-size: 14px;
+  /* animation */
+  transform-origin: top right;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.avatar:hover > .dropdown {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.dropdown:hover {
+  background-color: rgba(42, 40, 40, 0.8);
+}
+
+@media (max-width: 800px) {
+  .avatar {
+    margin-left: 8px;
+    align-self: center;
+  }
+}
