@@ -1,4 +1,4 @@
-import React, { Suspense } from "react"
+import React from "react"
 import { Route, Routes } from "react-router-dom"
 import ProtectedRoutes from "./components/ProtectedRoutes"
 import { Header, Home, Landing } from "./containers"

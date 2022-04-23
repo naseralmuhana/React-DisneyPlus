@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom"
 import { Landing } from "../containers"
-import { useAuth } from "../store/auth-context"
+import { useAuth } from "../store/AuthContext"
 
 const ProtectedRoutes = () => {
-  const { currentUser } = useAuth()
-  return currentUser ? <Outlet /> : <Landing />
+  const { isLoggedIn } = useAuth()
+  return isLoggedIn ? <Outlet /> : <Landing />
 }
 
 export default ProtectedRoutes
