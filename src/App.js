@@ -1,23 +1,25 @@
 import React from "react"
-import { Route, Routes } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
 import ProtectedRoutes from "./components/ProtectedRoutes"
-import { Header, Home, Landing } from "./containers"
+import { Header, Home, Landing, Search } from "./containers"
+import { useAuth } from "./store/AuthContext"
 
 // const Header = React.lazy(() => import("./containers/Header"))
 // const Landing = React.lazy(() => import("./containers/Landing"))
 // const Home = React.lazy(() => import("./containers/Home"))
 
 const App = () => {
-  console.log("APP")
+  const { isLoggedIn } = useAuth()
   return (
     <>
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          {!isLoggedIn && <Route path="/" element={<Landing />} />}
           <Route element={<ProtectedRoutes />}>
             <Route path="home" element={<Home />} />
           </Route>
+          <Route path="*" element={<Navigate to={"home"} />} />
         </Routes>
       </main>
     </>

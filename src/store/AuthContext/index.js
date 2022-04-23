@@ -11,7 +11,6 @@ const AuthContext = React.createContext({
 })
 
 export const AuthProvider = ({ children }) => {
-  console.log("AuthProvider")
   const [currentUser, setCurrentUser] = useState(null)
   const [isLoggedIn, setIsLoggedIn] = useLocalStorage("isLoggedIn", false)
 

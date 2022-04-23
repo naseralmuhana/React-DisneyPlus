@@ -3,7 +3,28 @@ import styles from "./index.module.css"
 
 const Home = () => {
   console.log("HOME")
-  return <div>Home</div>
+  return (
+    <>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+    </>
+  )
 }
 
-export default Home
+export default React.memo(Home)

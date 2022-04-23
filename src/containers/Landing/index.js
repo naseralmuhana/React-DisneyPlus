@@ -4,6 +4,7 @@ import Image from "./components/Image"
 import styles from "./index.module.css"
 
 const Landing = () => {
+  console.log("LANDING")
   return (
     <section className={styles.landing}>
       <div className={styles.background} />
@@ -25,4 +26,4 @@ const Landing = () => {
   )
 }
 
-export default Landing
+export default React.memo(Landing)
