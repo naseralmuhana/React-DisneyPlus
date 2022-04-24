@@ -1,0 +1,33 @@
+.section {
+  padding: 0px 0px 26px;
+}
+
+.section ul {
+  display: grid;
+
+  gap: 25px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media only screen and (max-width: 968px) {
+  .section ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 300px) {
+  .section ul {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (max-height: 300px) {
+  .section ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

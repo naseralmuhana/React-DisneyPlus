@@ -32,7 +32,8 @@
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.avatar:hover > .dropdown {
+.avatar:hover > .dropdown,
+.avatar:checked > .dropdown {
   opacity: 1;
   transform: scale(1);
 }

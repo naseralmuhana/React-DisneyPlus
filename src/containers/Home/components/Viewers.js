@@ -1,5 +1,6 @@
 import React from "react"
 import { viewersData } from "../../../assets/images"
+import Image from "../../../components/UI/Image"
 import Item from "../../../components/UI/Item"
 import styles from "./Viewers.module.css"
 
@@ -9,7 +10,7 @@ const Viewers = () => {
       <ul>
         {viewersData.map((viewer, index) => (
           <Item key={index}>
-            <img src={viewer.imgSrc} alt={viewer.label} />
+            <Image src={viewer.imgSrc} alt={viewer.label} />
             <video autoPlay={true} loop={true} playsInline={true} muted>
               <source src={viewer.vidSrc} type="video/mp4" />
             </video>

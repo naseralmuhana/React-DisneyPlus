@@ -1,7 +1,7 @@
 import { signInWithPopup, signOut } from "firebase/auth"
 import React, { useContext, useEffect, useState } from "react"
-import { auth, provider } from "../../firebase"
-import useLocalStorage from "../../hooks/use-localStorage"
+import { auth, provider } from "../firebase"
+import useLocalStorage from "../hooks/use-localStorage"
 
 const AuthContext = React.createContext({
   currentUser: {},
@@ -11,6 +11,7 @@ const AuthContext = React.createContext({
 })
 
 export const AuthProvider = ({ children }) => {
+  console.log("AuthProvider")
   const [currentUser, setCurrentUser] = useState({})
   const [isLoggedIn, setIsLoggedIn] = useLocalStorage("isLoggedIn", false)
 

@@ -1,7 +1,6 @@
 import React from "react"
 import { ctaLogoOne, ctaLogoTwo } from "../../assets/images"
 import Image from "./components/Image"
-
 import styles from "./index.module.css"
 
 const Landing = () => {

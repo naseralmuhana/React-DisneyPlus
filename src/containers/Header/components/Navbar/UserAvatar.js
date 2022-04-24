@@ -1,5 +1,5 @@
 import React from "react"
-import { useAuth } from "../../../../store/AuthContext"
+import { useAuth } from "../../../../store/auth-context"
 import styles from "./UserAvatar.module.css"
 
 const UserAvatar = ({ photo, name, className, ...props }) => {
