@@ -21,7 +21,7 @@
     position: fixed;
     inset: 0 0 0 75%;
     background-color: rgba(249, 249, 249, 0.1);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(30px);
     flex-direction: column;
     gap: 25px;
     padding: min(20vh, 160px) 25px;
