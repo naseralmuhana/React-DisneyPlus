@@ -1,12 +1,12 @@
 import React from "react"
-import Slider from "./components/Slider"
+import ImgSlider from "./components/ImgSlider"
 import styles from "./index.module.css"
 
 const Home = () => {
   console.log("HOME")
   return (
     <main className={styles.home}>
-      <Slider />
+      <ImgSlider />
     </main>
   )
 }

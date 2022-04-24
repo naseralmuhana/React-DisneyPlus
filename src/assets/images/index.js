@@ -1,4 +1,10 @@
 // exporting all images
+import badging from "./slider-badging.jpg"
+import scale from "./slider-scale.jpg"
+import badag from "./slider-badag.jpg"
+import scales from "./slider-scales.jpg"
+
+export const sliderImages = [badging, scale, badag, scales]
 
 export { default as ctaLogoOne } from "./cta-logo-one.svg"
 export { default as ctaLogoTwo } from "./cta-logo-two.png"
