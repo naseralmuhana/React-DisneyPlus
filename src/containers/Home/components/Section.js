@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import Image from "../../../components/UI/Image"
 import Item from "../../../components/UI/Item"
 import styles from "./Section.module.css"
@@ -10,9 +11,9 @@ const Section = ({ title, movies }) => {
       <ul>
         {movies.map((movie) => (
           <Item key={movie.id}>
-            <a href="/">
+            <Link to={`/detail/${movie.id}`}>
               <Image src={movie.cardImg} alt={movies.title} />
-            </a>
+            </Link>
           </Item>
         ))}
       </ul>
