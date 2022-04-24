@@ -18,8 +18,8 @@ const settings = {
 const ImgSlider = () => {
   return (
     <Slider {...settings} className="slider">
-      {sliderImages.map((image) => (
-        <div className="slider__item">
+      {sliderImages.map((image, index) => (
+        <div key={index} className="slider__item">
           <Link to={"/home"}>
             <img src={image} alt="" />
           </Link>

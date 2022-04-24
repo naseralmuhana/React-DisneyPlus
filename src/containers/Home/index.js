@@ -1,5 +1,6 @@
 import React from "react"
 import ImgSlider from "./components/ImgSlider"
+import Viewers from "./components/Viewers"
 import styles from "./index.module.css"
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
   return (
     <main className={styles.home}>
       <ImgSlider />
+      <Viewers />
     </main>
   )
 }
