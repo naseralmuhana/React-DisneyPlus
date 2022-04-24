@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import OutsideClickHandler from "react-outside-click-handler"
-import { navbarIcons } from "../../../../data"
+import { navbarIcons } from "../../../../assets/images"
 import { useAuth } from "../../../../store/AuthContext"
 import styles from "./index.module.css"
 import NavItem from "./NavItem"
