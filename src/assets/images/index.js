@@ -40,6 +40,13 @@ export const viewersData = [
   { label: "starWars", imgSrc: starWars, vidSrc: "videos/star-wars.mp4" },
 ]
 
+// For the Landing page and navigation
 export { default as ctaLogoOne } from "./cta-logo-one.svg"
 export { default as ctaLogoTwo } from "./cta-logo-two.png"
 export { default as headerLogo } from "./logo.svg"
+
+// actionsButton (inside detail page)
+export { default as playBlack } from "./play-icon-black.png"
+export { default as playWhite } from "./play-icon-white.png"
+
+export { default as groupIcon } from "./group-icon.png"

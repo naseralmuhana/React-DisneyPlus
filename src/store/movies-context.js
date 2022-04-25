@@ -3,6 +3,7 @@ import React, { useCallback, useContext, useEffect, useReducer } from "react"
 import db from "../firebase"
 // Initial State
 const initialState = {
+  allMovies: [],
   recommended: [],
   newDisney: [],
   originals: [],
@@ -19,6 +20,7 @@ const moviesReducer = (state, action) => {
   if (action.type === "FETCH") {
     const movies = action.movies
     return {
+      allMovies:movies,
       recommended: filter(movies, "recommend"),
       newDisney: filter(movies, "new"),
       originals: filter(movies, "original"),
@@ -48,6 +50,7 @@ export const MoviesProvider = ({ children }) => {
   }, [sendRequest])
 
   const contextValue = {
+    allMovies: state.allMovies,
     recommended: state.recommended,
     newDisney: state.newDisney,
     originals: state.originals,

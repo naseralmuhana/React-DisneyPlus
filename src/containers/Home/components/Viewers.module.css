@@ -1,7 +1,7 @@
 .viewers ul {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   margin-top: 30px;
   padding: 30px 0 26px;
 }
@@ -18,22 +18,4 @@
 .viewers li:hover > video {
   opacity: 1;
   transform: scale(1.05);
-}
-
-@media only screen and (max-width: 968px) {
-  .viewers ul {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .viewers ul {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-}
-
-@media only screen and (max-height: 300px) {
-  .viewers ul {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
