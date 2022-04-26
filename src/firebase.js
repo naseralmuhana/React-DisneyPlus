@@ -4,13 +4,13 @@ import { getStorage } from "firebase/storage"
 import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDkXO8TVMFu554Udm1Myq3Jqr0BTqI7ztk",
-  authDomain: "disney-clone-1d29f.firebaseapp.com",
-  projectId: "disney-clone-1d29f",
-  storageBucket: "disney-clone-1d29f.appspot.com",
-  messagingSenderId: "368082226016",
-  appId: "1:368082226016:web:dbd87f86c17a6f83a32c05",
-  measurementId: "G-ZNBMNBWGBJ",
+  apiKey: "AIzaSyAtF5xTLh7cKFIuKKtKQ2IKtMCpV6yius4",
+  authDomain: "disneyplus-clone-154aa.firebaseapp.com",
+  projectId: "disneyplus-clone-154aa",
+  storageBucket: "disneyplus-clone-154aa.appspot.com",
+  messagingSenderId: "853354537800",
+  appId: "1:853354537800:web:1940dd348124420a6b497d",
+  measurementId: "G-8K86PYGMSN",
 }
 
 const app = initializeApp(firebaseConfig)
