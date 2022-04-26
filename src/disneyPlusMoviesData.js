@@ -5,12 +5,6 @@
 //       .then((data) => console.log(data))
 //       .catch((error) => console.log(error))
 //   })
-//   setDoc(doc(db, "cities", "new-city-id"), {
-//     name: "Tokyo",
-//     country: "Japan",
-//   })
-//     .then((data) => console.log(data))
-//     .catch((error) => console.log(error))
 // }, [])
 
 export const movies = [
