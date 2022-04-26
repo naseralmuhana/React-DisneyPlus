@@ -29,6 +29,7 @@ const Navbar = () => {
           </div>
           <ul className={styles.nav__list} data-visible={toggleMenu}>
             {navbarIconsList}
+            <li>hello</li>
             <UserAvatar
               className={styles.active}
               photo={currentUser.photoURL}
