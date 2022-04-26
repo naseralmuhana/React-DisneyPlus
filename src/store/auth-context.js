@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
       setIsLoggedIn(!!user)
     })
     return unsubscribe
-  }, [])
+  }, [setIsLoggedIn])
 
   const contextValue = {
     currentUser,
