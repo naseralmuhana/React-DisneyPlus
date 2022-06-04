@@ -20,7 +20,7 @@ const moviesReducer = (state, action) => {
   if (action.type === "FETCH") {
     const movies = action.movies
     return {
-      allMovies:movies,
+      allMovies: movies,
       recommended: filter(movies, "recommend"),
       newDisney: filter(movies, "new"),
       originals: filter(movies, "original"),
@@ -31,7 +31,6 @@ const moviesReducer = (state, action) => {
 }
 
 export const MoviesProvider = ({ children }) => {
-  console.log("MoviesProvider")
   const [state, dispatch] = useReducer(moviesReducer, initialState)
 
   const sendRequest = useCallback(async () => {

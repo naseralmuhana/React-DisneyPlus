@@ -5,7 +5,6 @@ import Image from "./components/Image"
 import styles from "./index.module.css"
 
 const Landing = () => {
-  console.log("LANDING")
   return (
     <>
       <Helmet>

@@ -7,8 +7,9 @@ import Viewers from "./components/Viewers"
 import styles from "./index.module.css"
 
 const Home = () => {
-  console.log("HOME")
-  const { trending, originals, recommended, newDisney } = useMoviesContext()
+  const { allMovies, trending, originals, recommended, newDisney } =
+    useMoviesContext()
+  console.log(allMovies)
 
   return (
     <>
